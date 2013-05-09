@@ -71,7 +71,8 @@
 	
 		this.each(function() {		
 				
-			var api = $(this).tooltip().onBeforeShow(function(e, pos) {				
+			var api = $(this).data('tooltip');
+            api.onBeforeShow(function(e, pos) {
 
 				// get nessessary variables
 				var tip = this.getTip(), tipConf = this.getConf();  
